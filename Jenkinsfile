@@ -28,8 +28,20 @@ pipeline {
         }
          stage('Backend tests') {
             steps {
-                sh 'pwd'
-                sh 'ls -lart'
+                sh '''
+                    cd jenkins-pipeline-example2/backend-project/
+                    npm install && npm run test:report:regression                   
+                ''' 
+                archiveArtifacts allowEmptyArchive: true, artifacts: 'jenkins-pipeline-example2/backend-project/cypress/videos/**'
+                publishHTML([
+                    allowMissing: false, 
+                    alwaysLinkToLastBuild: false, 
+                    keepAll: false, 
+                    reportDir: 'jenkins-pipeline-example2/backend-project/mochawesome-report', 
+                    reportFiles: 'mochawesome.html', 
+                    reportName: 'Backend report', 
+                    reportTitles: ''
+                ])
             }
         }
          stage('Performance tests') {
