@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import * as roomHelpers from '../helpers/roomHelpers'
 
 describe('Test suite 1', function(){
     it('test case 1', function(){
