@@ -8,7 +8,7 @@ const ENDPOINT_PUT_EDIT = 'http://localhost:3000/api/room/'
 
 
 
-
+/*
 function getAllRoomsRequest(cy){
     cy.authenticateSession().then((response =>{
         
@@ -28,6 +28,7 @@ function getAllRoomsRequest(cy){
         logoutRequest(cy)
     }))
 }
+*/
 
 function createRoomRequest(cy){
     cy.authenticateSession().then((response =>{
