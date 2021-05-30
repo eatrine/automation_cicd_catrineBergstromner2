@@ -34,7 +34,5 @@ describe('Test suite 1', function(){
         cy.get('.menu > :nth-child(2)').click()
         cy.get('.user > .btn').click()
         cy.contains('Login')
-
-
-
     })
+})
