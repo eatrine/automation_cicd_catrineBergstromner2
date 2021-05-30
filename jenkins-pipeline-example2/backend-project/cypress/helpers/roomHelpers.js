@@ -1,4 +1,4 @@
-const faker = require('faker')
+//const faker = require('faker')
 
 const ENDPOINT_GET_ALL_ROOMS = 'http://localhost:3000/api/rooms'
 const ENDPOINT_POST_CREATE_ROOM = 'http://localhost:3000/api/room/new'
