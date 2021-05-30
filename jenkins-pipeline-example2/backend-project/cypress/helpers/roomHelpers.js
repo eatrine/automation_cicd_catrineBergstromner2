@@ -230,7 +230,7 @@ function createAndDeleteRequestOfRoom(cy){
 
 module.exports = {
     createRoomRequest, 
-    getAllRoomsRequest,
+    //getAllRoomsRequest,
     deleteRequestRoom,
     createRoomRequestAndEdit,
     createAndDeleteRequestOfRoom,
